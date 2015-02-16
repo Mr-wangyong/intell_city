@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+	<!-- 每一个模块，都有一个顶部标题 -->
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/layout_title_bar" />
+	<!-- 当前新闻中心模块，对应的底部显示内容，由左侧侧拉栏目去决定，底部要去随时切换的一个帧布局 -->
+	
+    <FrameLayout
+        android:id="@+id/news_center_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar" />
+    
+    <LinearLayout 
+        android:id="@+id/ll_loading"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:gravity="center"
+	    >
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="玩命加载中...."
+	        android:textColor="@android:color/darker_gray"
+	        android:textSize="30sp"
+	        />
+
+	    <ProgressBar
+	        android:id="@+id/progressBar1"
+	        style="?android:attr/progressBarStyleLarge"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+	</LinearLayout>
+
+
+</RelativeLayout>
